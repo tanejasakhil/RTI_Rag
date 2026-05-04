@@ -1,0 +1,5 @@
+.*
+!.gitignore
+downloaded_pdfs/
+.venv/
+uv.lock
