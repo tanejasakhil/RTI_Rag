@@ -1,5 +1,5 @@
 .*
 !.gitignore
-downloaded_pdfs/
+downloaded_pdfs
 .venv/
 uv.lock
