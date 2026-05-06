@@ -8,3 +8,4 @@ parsed_docs.json
 eval_results.json
 qdrant_db/
 __pycache__/
+__pycache__
