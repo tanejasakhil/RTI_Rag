@@ -1,0 +1,107 @@
+[
+  {
+    "id": "central_01",
+    "category": "central",
+    "question": "What is the time limit for providing information under the RTI Act?",
+    "expected_sources": ["RTI-Act.pdf", "The_Right_to_Information_(1st Amendment)_Act_2019.pdf"],
+    "expected_answer_contains": ["30 days", "section 7"]
+  },
+  {
+    "id": "central_02",
+    "category": "central",
+    "question": "What is the penalty for a Public Information Officer who fails to provide information under the RTI Act?",
+    "expected_sources": ["RTI-Act.pdf"],
+    "expected_answer_contains": ["250", "penalty", "25000"]
+  },
+  {
+    "id": "central_03",
+    "category": "central",
+    "question": "Who is a Public Information Officer and how are they designated?",
+    "expected_sources": ["RTI-Act.pdf"],
+    "expected_answer_contains": ["designated", "section 5"]
+  },
+  {
+    "id": "central_04",
+    "category": "central",
+    "question": "What are the key changes introduced by the RTI Amendment Act 2019?",
+    "expected_sources": ["The_Right_to_Information_(1st Amendment)_Act_2019.pdf"],
+    "expected_answer_contains": ["2019", "amendment"]
+  },
+  {
+    "id": "central_05",
+    "category": "central",
+    "question": "List the main categories of information exempt from disclosure under Section 8 of the RTI Act.",
+    "expected_sources": ["RTI-Act.pdf"],
+    "expected_answer_contains": ["section 8", "exempt"]
+  },
+  {
+    "id": "central_06",
+    "category": "central",
+    "question": "What is the application fee for filing an RTI request under the central RTI rules?",
+    "expected_sources": ["RTI-Act.pdf"],
+    "expected_answer_contains": ["10", "fee", "rupees"]
+  },
+  {
+    "id": "state_ap_01",
+    "category": "state_andhra_pradesh",
+    "question": "What are the RTI rules for Andhra Pradesh?",
+    "expected_sources": ["andhra_pradesh_rti.pdf", "rti_rules_telangana_and_Andhra_Pradesh.pdf"],
+    "expected_answer_contains": ["andhra", "rules"]
+  },
+  {
+    "id": "state_arunachal_01",
+    "category": "state_arunachal_pradesh",
+    "question": "What are the original RTI rules of Arunachal Pradesh from 2005?",
+    "expected_sources": ["Arunachal_Pradesh_Right_to_Information_Rules_2005.pdf"],
+    "expected_answer_contains": ["arunachal", "2005"]
+  },
+  {
+    "id": "state_assam_01",
+    "category": "state_assam",
+    "question": "What are the key duties of a State Public Information Officer in Assam regarding RTI requests?",
+    "expected_sources": ["Assam_handbook_spio_faa.pdf"],
+    "expected_answer_contains": ["spio", "information officer"]
+  },
+  {
+    "id": "state_bihar_01",
+    "category": "state_bihar",
+    "question": "What changes were made to Bihar RTI rules by the 2009 amendment?",
+    "expected_sources": ["Bihar_Right_to_Information_(Amendment)_Rules_2009.pdf"],
+    "expected_answer_contains": ["2009", "amendment", "bihar"]
+  },
+  {
+    "id": "state_delhi_01",
+    "category": "state_delhi",
+    "question": "What are the frequently asked questions about filing RTI in Delhi?",
+    "expected_sources": ["Delhi_FAQ-RTI-DL-Eng.pdf"],
+    "expected_answer_contains": ["delhi", "application"]
+  },
+  {
+    "id": "state_gujarat_01",
+    "category": "state_gujarat",
+    "question": "What are the Gujarat RTI rules introduced in 2010?",
+    "expected_sources": ["Gujarat_RTI_rules_2010.pdf"],
+    "expected_answer_contains": ["gujarat", "2010", "rules"]
+  },
+  {
+    "id": "state_karnataka_01",
+    "category": "state_karnataka",
+    "question": "What are the RTI provisions specific to Karnataka?",
+    "expected_sources": ["Karnataka_RTI.pdf"],
+    "expected_answer_contains": ["karnataka"]
+  },
+  {
+    "id": "state_kerala_01",
+    "category": "state_kerala",
+    "question": "What does the Kerala RTI user manual say about the appeal process?",
+    "expected_sources": ["Kerela_User_manual.pdf"],
+    "expected_answer_contains": ["appeal", "kerala"]
+  },
+  {
+    "id": "state_maharashtra_01",
+    "category": "state_maharashtra",
+    "question": "What are the steps to file an RTI online in Maharashtra?",
+    "expected_sources": ["Maharashtra_FAQ-RTI-Online.pdf"],
+    "expected_answer_contains": ["online", "maharashtra"]
+  }
+]

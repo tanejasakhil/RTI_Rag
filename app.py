@@ -5,10 +5,9 @@ from collections import deque
 from llama_index.core import VectorStoreIndex, StorageContext, Settings, PromptTemplate
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.core.query_engine import RetrieverQueryEngine
-from llama_index.core.postprocessor import SimilarityPostprocessor, LongContextReorder
-from llama_index.postprocessor.flag_embedding_reranker import FlagEmbeddingReranker
+from llama_index.core.postprocessor import SimilarityPostprocessor, LongContextReorder, SentenceTransformerRerank
 from llama_index.vector_stores.qdrant import QdrantVectorStore
-from llama_index.llms.openrouter import OpenRouter
+from llama_index.llms.openai_like import OpenAILike
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from models import UserQuery
 from config import config
@@ -35,15 +34,16 @@ class RateLimiter:
 
 @st.cache_resource
 def load_query_engine():
-    Settings.embed_model = HuggingFaceEmbedding(
-        model_name="nomic-ai/nomic-embed-text-v2-moe",
-        trust_remote_code=True
-    )
-    Settings.llm = OpenRouter(
-        api_key=config.openrouter_api_key,
+    Settings.embed_model = HuggingFaceEmbedding(model_name=config.embed_model)
+    Settings.llm = OpenAILike(
+        api_key=config.aistudio_api_key,
+        api_base=config.aistudio_api_base,
         model=config.model_name,
         max_tokens=config.max_tokens,
+        context_window=config.context_window,
         temperature=config.temperature,
+        timeout=config.timeout,
+        is_chat_model=True,
     )
 
     client = qdrant_client.QdrantClient(path=config.qdrant_path)
@@ -59,9 +59,7 @@ def load_query_engine():
         index=index, similarity_top_k=config.top_k_retrieve
     )
 
-    reranker = FlagEmbeddingReranker(
-        model="BAAI/bge-reranker-v2-m3", top_n=config.top_n_rerank
-    )
+    reranker = SentenceTransformerRerank(model=config.reranker_model, top_n=config.top_n_rerank)
     similarity_filter = SimilarityPostprocessor(
         similarity_cutoff=config.similarity_cutoff
     )
@@ -76,7 +74,12 @@ def load_query_engine():
         "3. Never infer, assume, or use outside knowledge.\n"
         "4. ALWAYS cite the source document filename and date at the end.\n"
         "5. If multiple documents conflict, prefer the more recent one.\n"
-        "6. If context is partial, state what you found and what is missing.\n\n"
+        "6. If context is partial, state what you found and what is missing.\n"
+        "7. STATE FALLBACK RULE: If a question asks about a specific state but no "
+        "state-specific document is present in the context, answer using the central "
+        "RTI Act (RTI-Act.pdf) and explicitly note: \"No state-specific rules were "
+        "found for [state]; the answer is based on the central RTI Act, 2005, which "
+        "applies by default unless the state has enacted its own rules.\"\n\n"
         "Format your answer as:\n"
         "[Answer]\n...your answer here...\n\n"
         "[Sources]\n- filename.pdf (Year: XXXX)\n\n"
@@ -106,7 +109,7 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 if "rate_limiter" not in st.session_state:
     st.session_state.rate_limiter = RateLimiter(
-        max_requests=config.max_requests_per_minute
+        max_requests=config.max_requests_per_minute, window_seconds=60
     )
 
 for msg in st.session_state.messages:
@@ -134,7 +137,8 @@ if prompt := st.chat_input("Ask a question about the RTI documents..."):
             with st.spinner("Searching documents..."):
                 response = query_engine.query(validated.question)
                 output = st.write_stream(
-                    token.delta for token in response.response_gen
+                    token.delta if hasattr(token, "delta") else token
+                    for token in response.response_gen
                 )
 
             with st.expander("📎 Sources used"):

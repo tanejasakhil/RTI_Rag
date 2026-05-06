@@ -8,17 +8,24 @@ dependencies = [
     "torchvision",
     "llama-index",
     "llama-index-vector-stores-qdrant",
-    "llama-index-llms-openrouter",
+    "llama-index-llms-openai-like",
     "llama-index-embeddings-huggingface",
     "llama-index-postprocessor-flag-embedding-reranker",
     "qdrant-client",
-    "docling[vlm]",
+    "pymupdf4llm",
+    "langdetect",
+    "transformers",
+    "sentencepiece",
     "streamlit",
     "pydantic",
     "pydantic-settings",
     "python-dotenv",
     "ragas",
     "einops>=0.8.2",
+    "easyocr>=1.7.2",
+    "sacremoses>=0.1.1",
+    "flagembedding",
+    "llama-index-postprocessor-sentence-transformer-rerank",
 ]
 
 [tool.uv]
@@ -31,3 +38,4 @@ explicit = true
 [tool.uv.sources]
 torch = { index = "pytorch-cu121" }
 torchvision = { index = "pytorch-cu121" }
+flagembedding = { git = "https://github.com/FlagOpen/FlagEmbedding.git" }

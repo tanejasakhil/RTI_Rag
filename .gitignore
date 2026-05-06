@@ -3,3 +3,8 @@
 downloaded_pdfs
 .venv/
 uv.lock
+RTI_Docs
+parsed_docs.json
+eval_results.json
+qdrant_db/
+__pycache__/
