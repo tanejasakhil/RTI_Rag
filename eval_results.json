@@ -1,0 +1,239 @@
+[
+  {
+    "id": "central_01",
+    "category": "central",
+    "question": "What is the time limit for providing information under the RTI Act?",
+    "retrieval_recall": 0.0,
+    "keyword_coverage": "1/2",
+    "expected_sources": [
+      "RTI-Act.pdf",
+      "The_Right_to_Information_(1st Amendment)_Act_2019.pdf"
+    ],
+    "retrieved_sources": [
+      "Kerela_User_manual.pdf",
+      "Assam_handbook_spio_faa.pdf",
+      "Assam_summary-on-RTI-filling.pdf"
+    ],
+    "answer_preview": "<thought>*   Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumption, or outside knowledge.\n    *  "
+  },
+  {
+    "id": "central_02",
+    "category": "central",
+    "question": "What is the penalty for a Public Information Officer who fails to provide information under the RTI Act?",
+    "retrieval_recall": 0.0,
+    "keyword_coverage": "2/3",
+    "expected_sources": [
+      "RTI-Act.pdf"
+    ],
+    "retrieved_sources": [
+      "Chandigarh_rti_highcourt.pdf",
+      "Assam_handbook_spio_faa.pdf",
+      "Assam_summary-on-RTI-filling.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumption, or outside knowledge.\n  "
+  },
+  {
+    "id": "central_03",
+    "category": "central",
+    "question": "Who is a Public Information Officer and how are they designated?",
+    "retrieval_recall": 0.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "RTI-Act.pdf"
+    ],
+    "retrieved_sources": [
+      "Odisha_rti-rules-2005.pdf",
+      "andhra_pradesh_rti.pdf",
+      "Assam_handbook_spio_faa.pdf"
+    ],
+    "answer_preview": "<thought>*   Question: \"Who is a Public Information Officer and how are they designated?\"\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumpti"
+  },
+  {
+    "id": "central_04",
+    "category": "central",
+    "question": "What are the key changes introduced by the RTI Amendment Act 2019?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "The_Right_to_Information_(1st Amendment)_Act_2019.pdf"
+    ],
+    "retrieved_sources": [
+      "The_Right_to_Information_(1st Amendment)_Act_2019.pdf"
+    ],
+    "answer_preview": "<thought>*   Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumption, or outside knowledge.\n    *  "
+  },
+  {
+    "id": "central_05",
+    "category": "central",
+    "question": "List the main categories of information exempt from disclosure under Section 8 of the RTI Act.",
+    "retrieval_recall": 0.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "RTI-Act.pdf"
+    ],
+    "retrieved_sources": [
+      "andhra_pradesh_rti.pdf",
+      "Assam_handbook_spio_faa.pdf",
+      "Assam_summary-on-RTI-filling.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: List the main categories of information exempt from disclosure under Section 8 of the RTI Act.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this inf"
+  },
+  {
+    "id": "central_06",
+    "category": "central",
+    "question": "What is the application fee for filing an RTI request under the central RTI rules?",
+    "retrieval_recall": 0.0,
+    "keyword_coverage": "3/3",
+    "expected_sources": [
+      "RTI-Act.pdf"
+    ],
+    "retrieved_sources": [
+      "Himachal_Pradesh_ RTI_Rules.pdf",
+      "andhra_pradesh_rti.pdf",
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf",
+      "Maharashtra_FAQ-RTI-Online.pdf",
+      "West_Bengal-RTI-Rules-2006.pdf"
+    ],
+    "answer_preview": "<thought>*   User Question: \"What is the application fee for filing an RTI request under the central RTI rules?\"\n    *   Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this informati"
+  },
+  {
+    "id": "state_ap_01",
+    "category": "state_andhra_pradesh",
+    "question": "What are the RTI rules for Andhra Pradesh?",
+    "retrieval_recall": 0.5,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "andhra_pradesh_rti.pdf",
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf"
+    ],
+    "retrieved_sources": [
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf"
+    ],
+    "answer_preview": "<thought>*   Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumption, or outside knowledge.\n    *  "
+  },
+  {
+    "id": "state_arunachal_01",
+    "category": "state_arunachal_pradesh",
+    "question": "What are the original RTI rules of Arunachal Pradesh from 2005?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "Arunachal_Pradesh_Right_to_Information_Rules_2005.pdf"
+    ],
+    "retrieved_sources": [
+      "Himachal_Pradesh_ RTI_Rules.pdf",
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf",
+      "Arunachal_Pradesh_Right_to_Information_(Fourth_Amendment)_Rules_2007.pdf",
+      "Arunachal_Pradesh_Right_to_Information_(Fifth_Amendment)_Rules_2007.pdf",
+      "Arunachal_Pradesh_Right_to_Information_Rules_2005.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What are the original RTI rules of Arunachal Pradesh from 2005?\"\n    *   Constraints:\n        1.  Answer ONLY using provided context.\n        2.  If not in context, say: \"I could not find this informatio"
+  },
+  {
+    "id": "state_assam_01",
+    "category": "state_assam",
+    "question": "What are the key duties of a State Public Information Officer in Assam regarding RTI requests?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "Assam_handbook_spio_faa.pdf"
+    ],
+    "retrieved_sources": [
+      "Assam_handbook_spio_faa.pdf",
+      "Assam_summary-on-RTI-filling.pdf"
+    ],
+    "answer_preview": "<thought>*   Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What are the key duties of a State Public Information Officer in Assam regarding RTI requests?\"\n    *   Constraints:\n        1.  Answer ONLY using provided context.\n        2.  If not in context, say: \"I coul"
+  },
+  {
+    "id": "state_bihar_01",
+    "category": "state_bihar",
+    "question": "What changes were made to Bihar RTI rules by the 2009 amendment?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "3/3",
+    "expected_sources": [
+      "Bihar_Right_to_Information_(Amendment)_Rules_2009.pdf"
+    ],
+    "retrieved_sources": [
+      "Bihar_Right_to_Information_(Amendment)_Rules_2009.pdf",
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf"
+    ],
+    "answer_preview": "<thought>*   Role: Research assistant for RTI documents.\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n    *   Constraint 3: No inference, assumption, or outside knowledge.\n    *  "
+  },
+  {
+    "id": "state_delhi_01",
+    "category": "state_delhi",
+    "question": "What are the frequently asked questions about filing RTI in Delhi?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "Delhi_FAQ-RTI-DL-Eng.pdf"
+    ],
+    "retrieved_sources": [
+      "Delhi_FAQ-RTI-DL-Eng.pdf",
+      "Assam_summary-on-RTI-filling.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What are the frequently asked questions about filing RTI in Delhi?\"\n    *   Constraints:\n        1.  Answer ONLY using provided context.\n        2.  If not in context, say: \"I could not find this informa"
+  },
+  {
+    "id": "state_gujarat_01",
+    "category": "state_gujarat",
+    "question": "What are the Gujarat RTI rules introduced in 2010?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "3/3",
+    "expected_sources": [
+      "Gujarat_RTI_rules_2010.pdf"
+    ],
+    "retrieved_sources": [
+      "Karnataka_RTI.pdf",
+      "rti_rules_telangana_and_Andhra_Pradesh.pdf",
+      "Gujarat_RTI_rules_2010.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Question: \"What are the Gujarat RTI rules introduced in 2010?\"\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this information in the provided documents.\"\n "
+  },
+  {
+    "id": "state_karnataka_01",
+    "category": "state_karnataka",
+    "question": "What are the RTI provisions specific to Karnataka?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "1/1",
+    "expected_sources": [
+      "Karnataka_RTI.pdf"
+    ],
+    "retrieved_sources": [
+      "Karnataka_RTI.pdf",
+      "andhra_pradesh_rti.pdf",
+      "Himachal_Pradesh_ RTI_Rules.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What are the RTI provisions specific to Karnataka?\" based *only* on the provided context.\n    *   Constraints:\n        1.  Answer ONLY using provided context.\n        2.  If not in context, say: \"I could"
+  },
+  {
+    "id": "state_kerala_01",
+    "category": "state_kerala",
+    "question": "What does the Kerala RTI user manual say about the appeal process?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "Kerela_User_manual.pdf"
+    ],
+    "retrieved_sources": [
+      "Kerela_User_manual.pdf",
+      "andhra_pradesh_rti.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What does the Kerala RTI user manual say about the appeal process?\"\n    *   Constraint 1: Answer ONLY using provided context.\n    *   Constraint 2: If not in context, say \"I could not find this informati"
+  },
+  {
+    "id": "state_maharashtra_01",
+    "category": "state_maharashtra",
+    "question": "What are the steps to file an RTI online in Maharashtra?",
+    "retrieval_recall": 1.0,
+    "keyword_coverage": "2/2",
+    "expected_sources": [
+      "Maharashtra_FAQ-RTI-Online.pdf"
+    ],
+    "retrieved_sources": [
+      "Assam_handbook_spio_faa.pdf",
+      "Maharashtra_FAQ-RTI-Online.pdf"
+    ],
+    "answer_preview": "<thought>*   User Role: Research assistant for RTI documents.\n    *   Task: Answer the question \"What are the steps to file an RTI online in Maharashtra?\"\n    *   Constraints:\n        1.  Answer ONLY using provided context.\n        2.  If not in context, say: \"I could not find this information in th"
+  }
+]
